@@ -1,0 +1,452 @@
+/* --- General Styling --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif; /* Menggunakan font yang lebih modern */
+    background-color: #e9ebee; /* Warna background abu-abu muda seperti di gambar */
+    color: #1c1e21;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --- Header / Navigation --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: #4a148c;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+header nav a {
+    margin: 0 0.5rem; /* Perkecil jarak antar menu */
+    padding: 0.6rem 1rem;
+    border-radius: 8px; /* Sedikit lebih bulat */
+    transition: background-color 0.3s;
+    font-weight: 500;
+}
+
+/* Ini akan memberi background pada link yang aktif */
+header nav a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+header nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.back-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #f0f2f5; /* Warna abu-abu muda */
+    color: #333;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 1.5rem; /* Jarak ke judul di bawahnya */
+    transition: background-color 0.2s;
+}
+
+.back-button:hover {
+    background-color: #e2e2e2;
+}
+
+.detail-header {
+    /* Bagian ini yang paling penting untuk diperbaiki */
+    display: flex;
+    align-items: flex-start; /* Mengatur perataan vertikal */
+    gap: 1.5rem; /* Jarak antara tombol kembali dan judul */
+    text-align: left;
+    margin-bottom: 1.5rem;
+    padding-left: 60px; /* Beri ruang untuk tombol kembali */
+}
+
+.detail-header-content {
+    flex: 1;
+}
+
+.detail-header h1 {
+    font-size: 2.5rem; /* Perbesar judul */
+    font-weight: 700; /* Buat lebih tebal */
+    margin-bottom: 0.3rem;
+    line-height: 1.2;
+}
+
+.detail-header .metadata {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    position: relative;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+/* .hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("https://via.placeholder.com/1200x300.png/333333?text=Gambar+Header"); /* Ganti dengan URL gambar Anda */
+    /* background-size: cover;
+    background-position: center;
+    filter: brightness(0.6);
+    z-index: -1; */
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000000; /* Menggunakan warna hitam solid */
+    z-index: -1;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* --- Main Content Area --- */
+.content-area {
+    width: 90%;
+    max-width: 950px;
+    margin: -50px auto 2rem auto; /* Tarik ke atas agar menimpa hero */
+    position: relative; /* Diperlukan untuk margin negatif */
+    padding: 2rem;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Search Bar (Diperbarui) --- */
+.search-container {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.search-container input[type="search"] {
+    width: 100%;
+    padding: 0.8rem;
+    padding-left: 2.5rem; /* Beri ruang untuk ikon */
+    border: 1px solid #ccc;
+    border-radius: 20px; /* Membuat sudut lebih bulat */
+    font-size: 1rem;
+    background-color: #f0f2f5;
+}
+/* Tips: Anda perlu menambahkan ikon search di HTML, di dalam .search-container */
+
+/* --- Article Card (Diperbarui) --- */
+.card {
+    display: flex;
+    gap: 1.5rem; /* Jarak antara gambar dan konten */
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #e9ebee;
+    padding-bottom: 2rem;
+}
+/* Hapus border-bottom untuk card terakhir */
+.card:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.card img {
+    width: 220px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    background-color: #333;
+}
+
+.card-content {
+    flex: 1;
+}
+
+.card-content h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    color: #050505;
+}
+
+.card-content .metadata {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #65676b;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.card-content p {
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: #65676b;
+}
+
+.card-content .button {
+    background-color: #6a1b9a; /* Warna ungu sedikit lebih terang */
+    color: white;
+    padding: 0.7rem 1.4rem;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    display: inline-block;
+}
+
+.card-content .button:hover {
+    background-color: #4a148c;
+}
+
+/* --- Pagination (Diperbarui) --- */
+.pagination-links {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.pagination-links a,
+.pagination-links span {
+    color: #65676b;
+    padding: 0.5rem 0.8rem;
+    border-radius: 5px;
+}
+
+.pagination-links span[aria-current="page"] span {
+    background-color: #4a148c;
+    color: white;
+    font-weight: bold;
+}
+
+.pagination-links a:hover {
+    background-color: #e9ebee;
+}
+
+/* --- Styling Halaman Detail --- */
+
+.detail-page {
+    background-color: #f0f2f5; /* Membuat background halaman abu-abu */
+    padding: 3rem 0; /* Memberi jarak atas dan bawah */
+    position: relative; /* Diperlukan untuk tombol kembali */
+}
+
+.back-button {
+    position: absolute; /* Membuat tombol keluar dari alur normal */
+    top: 3rem;
+    left: 5%; /* Posisi di kiri */
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    background-color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.detail-container {
+    width: 90%;
+    max-width: 750px; /* Lebar kontainer utama */
+    margin: 0 auto; /* Menengahkan kontainer */
+    padding: 2rem 3rem; /* Jarak di dalam kontainer */
+    background-color: white;
+    border-radius: 8px;
+}
+
+.detail-header h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.detail-header .metadata {
+    color: #777;
+    margin-bottom: 1.5rem;
+}
+
+.detail-image {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.detail-body {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.detail-body p {
+    margin-bottom: 1.5rem;
+}
+
+.comment-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+}
+
+.comment-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+/* Form Komentar */
+.comment-form {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-bottom: 2.5rem;
+}
+
+.comment-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.comment-input-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-input-area input[type="text"],
+.comment-input-area textarea {
+    width: 100%;
+    border: 1px solid #ddd;
+    background-color: #f7f7f7;
+    padding: 0.7rem 1rem;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    margin-bottom: 0.7rem;
+}
+
+.comment-input-area textarea {
+    resize: vertical; /* Membolehkan user mengubah tinggi textarea */
+}
+
+.kirim-button {
+    align-self: flex-end; /* Memposisikan tombol ke kanan */
+    padding: 0.6rem 1.5rem;
+    border-radius: 20px;
+    border: none;
+    background-color: #333;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.kirim-button:hover {
+    background-color: #555;
+}
+
+/* Daftar Komentar */
+.comment-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.comment-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.comment-content {
+    flex: 1;
+}
+
+.comment-author {
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+    display: block;
+}
+
+.comment-text {
+    margin-bottom: 0.5rem;
+}
+
+.comment-meta {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.8rem;
+    color: #777;
+}
+
+.comment-meta a {
+    font-weight: 600;
+    color: #555;
+}
+
+/* Untuk placeholder di halaman daftar */
+.dummy-image-list {
+    display: block;
+    width: 220px;
+    height: 160px;
+    background-color: #000000; /* Warna hitam */
+    border-radius: 8px;
+    font-size: 0; /* Sembunyikan alt text jika tidak perlu */
+}
+
+/* Untuk placeholder di halaman detail */
+.dummy-image-detail {
+    display: block;
+    width: 100%;
+    height: 400px; /* Sesuaikan tinggi sesuai kebutuhan */
+    background-color: #000000; /* Warna hitam */
+    border-radius: 8px;
+    font-size: 0;
+}
+
+/* --- Footer --- */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: #333;
+    color: #ccc;
+    font-size: 0.9rem;
+}
