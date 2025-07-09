@@ -6,10 +6,9 @@
         <div class="detail-container">
 
             <div class="detail-header">
-                {{-- Tombol kembali sekarang di dalam header --}}
+                
                 <a href="{{ url()->previous() }}" class="back-button">&lt;</a>
 
-                {{-- Wadah untuk judul dan tanggal --}}
                 <div class="detail-header-content">
                     <h1>{{ $berita->title }}</h1>
                     <div class="metadata">

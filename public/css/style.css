@@ -6,8 +6,8 @@
 }
 
 body {
-    font-family: "Poppins", sans-serif; /* Menggunakan font yang lebih modern */
-    background-color: #e9ebee; /* Warna background abu-abu muda seperti di gambar */
+    font-family: "Poppins", sans-serif; 
+    background-color: #e9ebee; 
     color: #1c1e21;
 }
 
@@ -33,14 +33,14 @@ header .logo {
 }
 
 header nav a {
-    margin: 0 0.5rem; /* Perkecil jarak antar menu */
+    margin: 0 0.5rem; 
     padding: 0.6rem 1rem;
-    border-radius: 8px; /* Sedikit lebih bulat */
+    border-radius: 8px; 
     transition: background-color 0.3s;
     font-weight: 500;
 }
 
-/* Ini akan memberi background pada link yang aktif */
+
 header nav a.active {
     background-color: rgba(255, 255, 255, 0.2);
 }
@@ -55,13 +55,13 @@ header nav a:hover {
     align-items: center;
     width: 40px;
     height: 40px;
-    background-color: #f0f2f5; /* Warna abu-abu muda */
+    background-color: #f0f2f5; 
     color: #333;
     border-radius: 50%;
     font-size: 1.5rem;
     font-weight: bold;
     text-decoration: none;
-    margin-bottom: 1.5rem; /* Jarak ke judul di bawahnya */
+    margin-bottom: 1.5rem; 
     transition: background-color 0.2s;
 }
 
@@ -70,13 +70,13 @@ header nav a:hover {
 }
 
 .detail-header {
-    /* Bagian ini yang paling penting untuk diperbaiki */
+    
     display: flex;
-    align-items: flex-start; /* Mengatur perataan vertikal */
-    gap: 1.5rem; /* Jarak antara tombol kembali dan judul */
+    align-items: flex-start; 
+    gap: 1.5rem; 
     text-align: left;
     margin-bottom: 1.5rem;
-    padding-left: 60px; /* Beri ruang untuk tombol kembali */
+    padding-left: 60px;
 }
 
 .detail-header-content {
@@ -84,8 +84,8 @@ header nav a:hover {
 }
 
 .detail-header h1 {
-    font-size: 2.5rem; /* Perbesar judul */
-    font-weight: 700; /* Buat lebih tebal */
+    font-size: 2.5rem; 
+    font-weight: 700; 
     margin-bottom: 0.3rem;
     line-height: 1.2;
 }
@@ -116,7 +116,7 @@ header nav a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url("https://via.placeholder.com/1200x300.png/333333?text=Gambar+Header"); /* Ganti dengan URL gambar Anda */
+    background-image: url("https://via.placeholder.com/1200x300.png/333333?text=Gambar+Header");
     /* background-size: cover;
     background-position: center;
     filter: brightness(0.6);
@@ -129,7 +129,7 @@ header nav a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #000000; /* Menggunakan warna hitam solid */
+    background-color: #000000; 
     z-index: -1;
 }
 
@@ -143,8 +143,8 @@ header nav a:hover {
 .content-area {
     width: 90%;
     max-width: 950px;
-    margin: -50px auto 2rem auto; /* Tarik ke atas agar menimpa hero */
-    position: relative; /* Diperlukan untuk margin negatif */
+    margin: -50px auto 2rem auto; 
+    position: relative; 
     padding: 2rem;
     background-color: white;
     border: 1px solid #ddd;
@@ -161,18 +161,18 @@ header nav a:hover {
 .search-container input[type="search"] {
     width: 100%;
     padding: 0.8rem;
-    padding-left: 2.5rem; /* Beri ruang untuk ikon */
+    padding-left: 2.5rem;
     border: 1px solid #ccc;
-    border-radius: 20px; /* Membuat sudut lebih bulat */
+    border-radius: 20px; 
     font-size: 1rem;
     background-color: #f0f2f5;
 }
-/* Tips: Anda perlu menambahkan ikon search di HTML, di dalam .search-container */
+/* Tips: ikon search di HTML, di dalam .search-container */
 
 /* --- Article Card (Diperbarui) --- */
 .card {
     display: flex;
-    gap: 1.5rem; /* Jarak antara gambar dan konten */
+    gap: 1.5rem; 
     margin-bottom: 2rem;
     border-bottom: 1px solid #e9ebee;
     padding-bottom: 2rem;
@@ -217,7 +217,7 @@ header nav a:hover {
 }
 
 .card-content .button {
-    background-color: #6a1b9a; /* Warna ungu sedikit lebih terang */
+    background-color: #6a1b9a; 
     color: white;
     padding: 0.7rem 1.4rem;
     border-radius: 5px;
@@ -259,15 +259,15 @@ header nav a:hover {
 /* --- Styling Halaman Detail --- */
 
 .detail-page {
-    background-color: #f0f2f5; /* Membuat background halaman abu-abu */
-    padding: 3rem 0; /* Memberi jarak atas dan bawah */
-    position: relative; /* Diperlukan untuk tombol kembali */
+    background-color: #f0f2f5; 
+    padding: 3rem 0; 
+    position: relative; 
 }
 
 .back-button {
-    position: absolute; /* Membuat tombol keluar dari alur normal */
+    position: absolute; 
     top: 3rem;
-    left: 5%; /* Posisi di kiri */
+    left: 5%; 
     font-size: 1.5rem;
     font-weight: bold;
     color: #333;
@@ -284,9 +284,9 @@ header nav a:hover {
 
 .detail-container {
     width: 90%;
-    max-width: 750px; /* Lebar kontainer utama */
-    margin: 0 auto; /* Menengahkan kontainer */
-    padding: 2rem 3rem; /* Jarak di dalam kontainer */
+    max-width: 750px;
+    margin: 0 auto; 
+    padding: 2rem 3rem; 
     background-color: white;
     border-radius: 8px;
 }
@@ -427,14 +427,14 @@ header nav a:hover {
     height: 160px;
     background-color: #000000; /* Warna hitam */
     border-radius: 8px;
-    font-size: 0; /* Sembunyikan alt text jika tidak perlu */
+    font-size: 0; 
 }
 
 /* Untuk placeholder di halaman detail */
 .dummy-image-detail {
     display: block;
     width: 100%;
-    height: 400px; /* Sesuaikan tinggi sesuai kebutuhan */
+    height: 400px; 
     background-color: #000000; /* Warna hitam */
     border-radius: 8px;
     font-size: 0;

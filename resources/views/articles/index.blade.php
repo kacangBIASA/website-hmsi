@@ -9,14 +9,14 @@
     <div class="content-area">
 
         <div class="search-container">
-            {{-- Tips: Untuk ikon search, Anda bisa menggunakan SVG atau Font Awesome di sini --}}
+            
             <input type="search" placeholder="Search">
         </div>
 
         <div class="article-list">
             @foreach ($articles as $article)
                 <div class="card">
-                    {{-- Ganti 'asset($article->image)' dengan path gambar Anda jika sudah ada --}}
+                    
                     <img src="" alt="Gambar Dummy" class="dummy-image-list">
 
                     <div class="card-content">
@@ -35,7 +35,7 @@
 
         <div class="pagination-links">
             {{-- $articles->links() --}}
-            {{-- Baris di atas di-nonaktifkan karena Anda menggunakan data statis. Jika pakai paginate, aktifkan lagi. --}}
+            {{-- Baris di atas di-nonaktifkan karena menggunakan data statis. Jika pakai paginate, aktifkan lagi. --}}
             <a href="#">1</a>
             <a href="#">2</a>
             <a href="#">3</a>

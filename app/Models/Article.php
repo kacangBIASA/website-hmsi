@@ -29,6 +29,5 @@ class Article extends Model
      * @var array
      */
     protected $casts = [
-        'published_at' => 'datetime', // Otomatis mengubah string tanggal menjadi objek Carbon
-    ];
+        'published_at' => 'datetime' ];
 }

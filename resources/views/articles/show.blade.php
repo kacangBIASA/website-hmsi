@@ -2,17 +2,14 @@
 
 @section('content')
 
-    {{-- Div pembungkus utama untuk halaman detail --}}
     <div class="detail-page">
 
-
-        {{-- Kontainer utama (kotak putih) --}}
         <div class="detail-container">
             <div class="detail-header">
-                {{-- Tombol kembali sekarang di dalam header --}}
+             
                 <a href="{{ url()->previous() }}" class="back-button">&lt;</a>
 
-                {{-- Wadah untuk judul dan tanggal --}}
+                
                 <div class="detail-header-content">
                     <h1>{{ $article->title }}</h1>
                     <div class="metadata">
@@ -21,10 +18,8 @@
                 </div>
             </div>
 
-            {{-- Gambar Utama Artikel --}}
           <img src="" alt="Gambar Dummy" class="detail-image dummy-image-detail">
 
-            {{-- Isi Lengkap Artikel --}}
             <div class="detail-body">
                 <p>Ini adalah isi lengkap dari artikel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
                     justo purus, suscipit a cursus ac, ultrices ac sem. Proin suscipit dui sit amet nisi convallis, pretium
@@ -34,7 +29,6 @@
                     bibendum leo justo et odio.</p>
             </div>
 
-            {{-- Bagian Komentar --}}
             <div class="comment-section">
                 <h3>Comment</h3>
 

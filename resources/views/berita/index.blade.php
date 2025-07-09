@@ -11,7 +11,7 @@
             <input type="search" placeholder="Search">
         </div>
         <div class="article-list">
-            {{-- Ganti variabelnya di sini --}}
+
             @foreach ($beritaItems as $berita)
                 <div class="card">
                    <img src="" alt="Gambar Dummy" class="detail-image dummy-image-detail">

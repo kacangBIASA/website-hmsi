@@ -10,7 +10,7 @@ class ArticleController extends Controller
     {
         $articles = Article::latest('published_at')->paginate(5);
 
-        // dd($articles); // <-- TAMBAHKAN BARIS INI
+        // dd($articles); //
 
         return view('articles.index', compact('articles'));
     }
