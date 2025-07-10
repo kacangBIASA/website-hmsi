@@ -1,0 +1,209 @@
+/* --- General Styling --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #e9ebee;
+    color: #1c1e21;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --- Header --- */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: #4a148c;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+header .logo {
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+header nav a {
+    margin: 0 0.5rem;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    font-weight: 500;
+}
+
+header nav a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+header nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    position: relative;
+    height: 400px;
+    background-color: #000;
+    background-image: url('/images/pengurus-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+}
+
+/* === Section Wrapper === */
+.pengurus-wrapper {
+    position: relative;
+    z-index: 2;
+    margin-top: -100px;
+}
+
+/* === Pengurus Section === */
+.pengurus-section {
+    background-color: #dcdcdc;
+    border-radius: 20px;
+    padding: 2rem 2rem;
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Judul Section */
+.pengurus-section h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-align: center;
+    color: #000;
+    margin-bottom: 2rem;
+}
+
+/* Layout Grid: hanya 2 kolom */
+.pengurus-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    justify-items: center;
+}
+
+/* Card Pengurus */
+.pengurus-card {
+    text-align: center;
+}
+
+/* Avatar Circle */
+.foto-bulat {
+    width: 100px;
+    height: 100px;
+    background-color: #000;
+    border-radius: 50%;
+    margin: 0 auto 1rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.foto-bulat img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.foto-bulat span {
+    color: white;
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-align: center;
+    line-height: 1rem;
+}
+
+/* Teks jabatan dan nama */
+.pengurus-card .jabatan {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #000;
+    margin-bottom: 0.3rem;
+}
+
+.pengurus-card .nama {
+    font-size: 0.8rem;
+    color: #222;
+}
+
+.pengurus-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    justify-items: center;
+}
+
+.pengurus-grid > .pengurus-card:only-child,
+.pengurus-grid > .pengurus-card:last-child:nth-child(odd) {
+    grid-column: span 2;
+    justify-self: center;
+}
+
+
+.pengurus-grid-senat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.pengurus-grid-senat .ketua {
+    text-align: center;
+}
+
+.senat-bawah {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    justify-items: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.senat-bawah > .pengurus-card:only-child,
+.senat-bawah > .pengurus-card:last-child:nth-child(odd) {
+    grid-column: span 2;
+    justify-self: center;
+}
+

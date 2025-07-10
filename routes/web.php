@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PengurusController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/pengurus', [PengurusController::class, 'index'])->name('pengurus.index');
+
+Route::get('/pengurus', function () {
+    return view('pengurus.index');
+})->name('pengurus.index');
+
+
