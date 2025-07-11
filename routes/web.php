@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\EventController;
+use App\Models\Event;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Event
+Route::get('/event', [EventController::class, 'index'])->name('event.index');
+Route::get('/event/{event:slug}', [EventController::class, 'show'])->name('event.show');
