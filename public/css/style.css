@@ -16,12 +16,8 @@ a {
     color: inherit;
 }
 
-/* --- Header --- */
+/* --- Header / Navigation --- */
 header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,7 +26,6 @@ header {
     color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
 
 header .logo {
     font-weight: bold;
@@ -45,6 +40,7 @@ header nav a {
     font-weight: 500;
 }
 
+
 header nav a.active {
     background-color: rgba(255, 255, 255, 0.2);
 }
@@ -53,157 +49,404 @@ header nav a:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
+.back-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #f0f2f5;
+    color: #333;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 1.5rem;
+    transition: background-color 0.2s;
+}
+
+.back-button:hover {
+    background-color: #e2e2e2;
+}
+
+.detail-header {
+
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    text-align: left;
+    margin-bottom: 1.5rem;
+    padding-left: 60px;
+}
+
+.detail-header-content {
+    flex: 1;
+}
+
+.detail-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+    line-height: 1.2;
+}
+
+.detail-header .metadata {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #777;
+    font-size: 0.9rem;
+}
+
 /* --- Hero Section --- */
 .hero-section {
     position: relative;
-    height: 400px;
-    background-color: #000;
-    background-image: url('/images/pengurus-bg.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     text-align: center;
-    overflow: hidden;
-    z-index: 1;
 }
 
-.hero-section::before {
+/* .hero-section::before {
     content: "";
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6);
-    z-index: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("https://via.placeholder.com/1200x300.png/333333?text=Gambar+Header");
+    /* background-size: cover;
+    background-position: center;
+    filter: brightness(0.6);
+    z-index: -1; */
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000000;
+    z-index: -1;
 }
 
 .hero-section h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 700;
-    position: relative;
-    z-index: 1;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* === Section Wrapper === */
-.pengurus-wrapper {
-    position: relative;
-    z-index: 2;
-    margin-top: -100px;
-}
-
-/* === Pengurus Section === */
-.pengurus-section {
-    background-color: #dcdcdc;
-    border-radius: 20px;
-    padding: 2rem 2rem;
-    margin: 2rem auto;
+/* --- Main Content Area --- */
+.content-area {
     width: 90%;
-    max-width: 800px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    max-width: 950px;
+    margin: -50px auto 2rem auto;
+    position: relative;
+    padding: 2rem;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Judul Section */
-.pengurus-section h2 {
-    font-size: 1.6rem;
-    font-weight: 700;
-    text-align: center;
-    color: #000;
+/* --- Search Bar (Diperbarui) --- */
+.search-container {
+    position: relative;
     margin-bottom: 2rem;
 }
 
-/* Layout Grid: hanya 2 kolom */
-.pengurus-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    justify-items: center;
+.search-container input[type="search"] {
+    width: 100%;
+    padding: 0.8rem;
+    padding-left: 2.5rem;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 1rem;
+    background-color: #f0f2f5;
+}
+/* Tips: ikon search di HTML, di dalam .search-container */
+
+/* --- Article Card (Diperbarui) --- */
+.card {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #e9ebee;
+    padding-bottom: 2rem;
+}
+/* Hapus border-bottom untuk card terakhir */
+.card:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
 }
 
-/* Card Pengurus */
-.pengurus-card {
-    text-align: center;
+.card img {
+    width: 220px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    background-color: #333;
 }
 
-/* Avatar Circle */
-.foto-bulat {
-    width: 100px;
-    height: 100px;
-    background-color: #000;
+.card-content {
+    flex: 1;
+}
+
+.card-content h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    color: #050505;
+}
+
+.card-content .metadata {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #65676b;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.card-content p {
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: #65676b;
+}
+
+.card-content .button {
+    background-color: #6a1b9a;
+    color: white;
+    padding: 0.7rem 1.4rem;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    display: inline-block;
+}
+
+.card-content .button:hover {
+    background-color: #4a148c;
+}
+
+/* --- Pagination (Diperbarui) --- */
+.pagination-links {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.pagination-links a,
+.pagination-links span {
+    color: #65676b;
+    padding: 0.5rem 0.8rem;
+    border-radius: 5px;
+}
+
+.pagination-links span[aria-current="page"] span {
+    background-color: #4a148c;
+    color: white;
+    font-weight: bold;
+}
+
+.pagination-links a:hover {
+    background-color: #e9ebee;
+}
+
+/* --- Styling Halaman Detail --- */
+
+.detail-page {
+    background-color: #f0f2f5;
+    padding: 3rem 0;
+    position: relative;
+}
+
+.back-button {
+    position: absolute;
+    top: 3rem;
+    left: 5%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    background-color: white;
     border-radius: 50%;
-    margin: 0 auto 1rem auto;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10;
 }
 
-.foto-bulat img {
+.detail-container {
+    width: 90%;
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 2rem 3rem;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.detail-header h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.detail-header .metadata {
+    color: #777;
+    margin-bottom: 1.5rem;
+}
+
+.detail-image {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.detail-body {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.detail-body p {
+    margin-bottom: 1.5rem;
+}
+
+.comment-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+}
+
+.comment-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+/* Form Komentar */
+.comment-form {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-bottom: 2.5rem;
+}
+
+.comment-avatar {
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
 }
 
-.foto-bulat span {
-    color: white;
-    font-weight: 600;
-    font-size: 0.75rem;
-    text-align: center;
-    line-height: 1rem;
-}
-
-/* Teks jabatan dan nama */
-.pengurus-card .jabatan {
-    font-weight: 600;
-    font-size: 0.9rem;
-    color: #000;
-    margin-bottom: 0.3rem;
-}
-
-.pengurus-card .nama {
-    font-size: 0.8rem;
-    color: #222;
-}
-
-.pengurus-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    justify-items: center;
-}
-
-.pengurus-grid > .pengurus-card:only-child,
-.pengurus-grid > .pengurus-card:last-child:nth-child(odd) {
-    grid-column: span 2;
-    justify-self: center;
-}
-
-
-.pengurus-grid-senat {
+.comment-input-area {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 2rem;
 }
 
-.pengurus-grid-senat .ketua {
-    text-align: center;
-}
-
-.senat-bawah {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    justify-items: center;
+.comment-input-area input[type="text"],
+.comment-input-area textarea {
     width: 100%;
-    max-width: 500px;
+    border: 1px solid #ddd;
+    background-color: #f7f7f7;
+    padding: 0.7rem 1rem;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    margin-bottom: 0.7rem;
 }
 
-.senat-bawah > .pengurus-card:only-child,
-.senat-bawah > .pengurus-card:last-child:nth-child(odd) {
-    grid-column: span 2;
-    justify-self: center;
+.comment-input-area textarea {
+    resize: vertical; /* Membolehkan user mengubah tinggi textarea */
 }
 
+.kirim-button {
+    align-self: flex-end; /* Memposisikan tombol ke kanan */
+    padding: 0.6rem 1.5rem;
+    border-radius: 20px;
+    border: none;
+    background-color: #333;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.kirim-button:hover {
+    background-color: #555;
+}
+
+/* Daftar Komentar */
+.comment-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.comment-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.comment-content {
+    flex: 1;
+}
+
+.comment-author {
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+    display: block;
+}
+
+.comment-text {
+    margin-bottom: 0.5rem;
+}
+
+.comment-meta {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.8rem;
+    color: #777;
+}
+
+.comment-meta a {
+    font-weight: 600;
+    color: #555;
+}
+
+/* Untuk placeholder di halaman daftar */
+.dummy-image-list {
+    display: block;
+    width: 220px;
+    height: 160px;
+    background-color: #000000; /* Warna hitam */
+    border-radius: 8px;
+    font-size: 0;
+}
+
+/* Untuk placeholder di halaman detail */
+.dummy-image-detail {
+    display: block;
+    width: 100%;
+    height: 400px;
+    background-color: #000000; /* Warna hitam */
+    border-radius: 8px;
+    font-size: 0;
+}
+
+/* --- Footer --- */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: #333;
+    color: #ccc;
+    font-size: 0.9rem;
+}
