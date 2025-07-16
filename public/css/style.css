@@ -6,8 +6,8 @@
 }
 
 body {
-    font-family: "Poppins", sans-serif; 
-    background-color: #e9ebee; 
+    font-family: "Poppins", sans-serif;
+    background-color: #e9ebee;
     color: #1c1e21;
 }
 
@@ -33,9 +33,9 @@ header .logo {
 }
 
 header nav a {
-    margin: 0 0.5rem; 
+    margin: 0 0.5rem;
     padding: 0.6rem 1rem;
-    border-radius: 8px; 
+    border-radius: 8px;
     transition: background-color 0.3s;
     font-weight: 500;
 }
@@ -55,13 +55,13 @@ header nav a:hover {
     align-items: center;
     width: 40px;
     height: 40px;
-    background-color: #f0f2f5; 
+    background-color: #f0f2f5;
     color: #333;
     border-radius: 50%;
     font-size: 1.5rem;
     font-weight: bold;
     text-decoration: none;
-    margin-bottom: 1.5rem; 
+    margin-bottom: 1.5rem;
     transition: background-color 0.2s;
 }
 
@@ -70,10 +70,10 @@ header nav a:hover {
 }
 
 .detail-header {
-    
+
     display: flex;
-    align-items: flex-start; 
-    gap: 1.5rem; 
+    align-items: flex-start;
+    gap: 1.5rem;
     text-align: left;
     margin-bottom: 1.5rem;
     padding-left: 60px;
@@ -84,8 +84,8 @@ header nav a:hover {
 }
 
 .detail-header h1 {
-    font-size: 2.5rem; 
-    font-weight: 700; 
+    font-size: 2.5rem;
+    font-weight: 700;
     margin-bottom: 0.3rem;
     line-height: 1.2;
 }
@@ -129,7 +129,7 @@ header nav a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #000000; 
+    background-color: #000000;
     z-index: -1;
 }
 
@@ -143,8 +143,8 @@ header nav a:hover {
 .content-area {
     width: 90%;
     max-width: 950px;
-    margin: -50px auto 2rem auto; 
-    position: relative; 
+    margin: -50px auto 2rem auto;
+    position: relative;
     padding: 2rem;
     background-color: white;
     border: 1px solid #ddd;
@@ -163,7 +163,7 @@ header nav a:hover {
     padding: 0.8rem;
     padding-left: 2.5rem;
     border: 1px solid #ccc;
-    border-radius: 20px; 
+    border-radius: 20px;
     font-size: 1rem;
     background-color: #f0f2f5;
 }
@@ -172,7 +172,7 @@ header nav a:hover {
 /* --- Article Card (Diperbarui) --- */
 .card {
     display: flex;
-    gap: 1.5rem; 
+    gap: 1.5rem;
     margin-bottom: 2rem;
     border-bottom: 1px solid #e9ebee;
     padding-bottom: 2rem;
@@ -217,7 +217,7 @@ header nav a:hover {
 }
 
 .card-content .button {
-    background-color: #6a1b9a; 
+    background-color: #6a1b9a;
     color: white;
     padding: 0.7rem 1.4rem;
     border-radius: 5px;
@@ -259,15 +259,15 @@ header nav a:hover {
 /* --- Styling Halaman Detail --- */
 
 .detail-page {
-    background-color: #f0f2f5; 
-    padding: 3rem 0; 
-    position: relative; 
+    background-color: #f0f2f5;
+    padding: 3rem 0;
+    position: relative;
 }
 
 .back-button {
-    position: absolute; 
+    position: absolute;
     top: 3rem;
-    left: 5%; 
+    left: 5%;
     font-size: 1.5rem;
     font-weight: bold;
     color: #333;
@@ -285,8 +285,8 @@ header nav a:hover {
 .detail-container {
     width: 90%;
     max-width: 750px;
-    margin: 0 auto; 
-    padding: 2rem 3rem; 
+    margin: 0 auto;
+    padding: 2rem 3rem;
     background-color: white;
     border-radius: 8px;
 }
@@ -427,14 +427,14 @@ header nav a:hover {
     height: 160px;
     background-color: #000000; /* Warna hitam */
     border-radius: 8px;
-    font-size: 0; 
+    font-size: 0;
 }
 
 /* Untuk placeholder di halaman detail */
 .dummy-image-detail {
     display: block;
     width: 100%;
-    height: 400px; 
+    height: 400px;
     background-color: #000000; /* Warna hitam */
     border-radius: 8px;
     font-size: 0;

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artikel HMSI</title>
+    <title>Pengurus HMSI</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,18 +21,16 @@
         </div> -->
         <div class="logo">
     <a href="/">
-        <img src="{{ asset('images/kabinet-logo.jpeg') }}" alt="HMSI" style="height: 40px;">
+        <img src="{{ asset('images/kabinet-logo.jpeg') }}" alt="" style="height: 40px;">
     </a>
     <span>HMSI</span>
 </div>
         <nav>
             <a href="#">Home</a>
-            <a href="{{ route('berita.index') }}"
-                class="{{ request()->routeIs('berita.index') ? 'active' : '' }}">Berita</a>
-            <a href="{{ route('articles.index') }}"
-                class="{{ request()->routeIs('articles.index') ? 'active' : '' }}">Artikel</a>
+            <a href="#">Berita</a>
+            <a href="#">Artikel</a>
             <a href="#">Events</a>
-            <a href="#">Pengurus</a>
+            <a href="{{ route('pengurus.index') }}" class="{{ request()->routeIs('pengurus.index') ? 'active' : '' }}">Pengurus</a>
             <a href="#">About</a>
         </nav>
     </header>
