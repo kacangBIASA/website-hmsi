@@ -108,6 +108,7 @@ header nav a:hover {
     height: 400px;
     background-image: url('');
     background-size: cover;
+    height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -117,13 +118,16 @@ header nav a:hover {
 
 
 .hero-section::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #000000;
+    background-image: url("https://via.placeholder.com/1200x300.png/333333?text=Gambar+Header");
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.6);
     z-index: -1;
 }
 
@@ -161,8 +165,9 @@ header nav a:hover {
     font-size: 1rem;
     background-color: #f0f2f5;
 }
+/* Tips: ikon search di HTML, di dalam .search-container */
 
-/* --- Article Card --- */
+/* --- Article Card (Diperbarui) --- */
 .card {
     display: flex;
     gap: 1.5rem;
@@ -171,7 +176,8 @@ header nav a:hover {
     padding-bottom: 2rem;
 }
 
-.card:last-of-type {
+/* Hapus border-bottom untuk card terakhir */
+main.card:last-of-type {
     border-bottom: none;
     margin-bottom: 0;
 }
@@ -223,8 +229,9 @@ header nav a:hover {
     background-color: #4a148c;
 }
 
-/* --- Pagination --- */
-.pagination-links {
+
+/* --- Pagination (Diperbarui) --- */
+main.pagination-links {
     margin-top: 3rem;
     display: flex;
     justify-content: center;
@@ -360,6 +367,11 @@ header nav a:hover {
 
 .kirim-button {
     align-self: flex-end;
+    resize: vertical; /* Membolehkan user mengubah tinggi textarea */
+}
+
+.kirim-button {
+    align-self: flex-end; /* Memposisikan tombol ke kanan */
     padding: 0.6rem 1.5rem;
     border-radius: 20px;
     border: none;
