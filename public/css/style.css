@@ -1,457 +1,624 @@
-/* --- General Styling --- */
-* {
+/* Font & Reset */
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
     font-family: "Poppins", sans-serif;
-    background-color: #e9ebee;
-    color: #1c1e21;
+    background-color: #ffffff;
+    color: #000000;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* --- Header / Navigation --- */
+/* Header */
 header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 5%;
-    background-color: #4a148c;
+    background-color: #4b0072;
+    padding: 12px 40px;
     color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 header .logo {
-    font-weight: bold;
-    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+header .logo a {
+    text-decoration: none;
+    color: white;
+}
+
+header nav {
+    display: flex;
+    gap: 32px;
 }
 
 header nav a {
-    margin: 0 0.5rem;
-    padding: 0.6rem 1rem;
-    border-radius: 8px;
-    transition: background-color 0.3s;
-    font-weight: 500;
-}
-
-
-header nav a.active {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-header nav a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.back-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    background-color: #f0f2f5;
-    color: #333;
-    border-radius: 50%;
-    font-size: 1.5rem;
-    font-weight: bold;
+    color: white;
     text-decoration: none;
-    margin-bottom: 1.5rem;
-    transition: background-color 0.2s;
+    font-weight: 500;
+    transition: 0.3s;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
 }
 
-.back-button:hover {
-    background-color: #e2e2e2;
+header nav a.active,
+header nav a:hover {
+    border-bottom: 2px solid white;
 }
 
-.detail-header {
-
-    display: flex;
-    align-items: flex-start;
-    gap: 1.5rem;
-    text-align: left;
-    margin-bottom: 1.5rem;
-    padding-left: 60px;
-}
-
-.detail-header-content {
-    flex: 1;
-}
-
-.detail-header h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 0.3rem;
-    line-height: 1.2;
-}
-
-.detail-header .metadata {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: #777;
-    font-size: 0.9rem;
-}
-
-/* --- Hero Section --- */
+/* Hero Section */
 .hero-section {
     position: relative;
     height: 400px;
-    background-image: url('');
+    background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)
+        ),
+        url("/images/pengurus-bg.png");
     background-size: cover;
-    height: 300px;
+    background-position: center;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     color: white;
     text-align: center;
 }
 
-
-.hero-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url("https://via.placeholder.com/1200x300.png/333333?text=Gambar+Header");
-    background-size: cover;
-    background-position: center;
-    filter: brightness(0.6);
-    z-index: -1;
-}
-
 .hero-section h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-/* --- Main Content Area --- */
-.content-area {
-    width: 90%;
-    max-width: 950px;
-    margin: -50px auto 2rem auto;
-    position: relative;
-    padding: 2rem;
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* --- Search Bar (Diperbarui) --- */
-.search-container {
-    position: relative;
-    margin-bottom: 2rem;
-}
-
-.search-container input[type="search"] {
-    width: 100%;
-    padding: 0.8rem;
-    padding-left: 2.5rem;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    font-size: 1rem;
-    background-color: #f0f2f5;
-}
-/* Tips: ikon search di HTML, di dalam .search-container */
-
-/* --- Article Card (Diperbarui) --- */
-.card {
-    display: flex;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-    border-bottom: 1px solid #e9ebee;
-    padding-bottom: 2rem;
-}
-
-/* Hapus border-bottom untuk card terakhir */
-main.card:last-of-type {
-    border-bottom: none;
-    margin-bottom: 0;
-}
-
-.card img {
-    width: 220px;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 8px;
-    background-color: #333;
-}
-
-.card-content {
-    flex: 1;
-}
-
-.card-content h3 {
-    font-size: 1.6rem;
-    margin-bottom: 0.5rem;
-    color: #050505;
-}
-
-.card-content .metadata {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: #65676b;
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-}
-
-.card-content p {
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-    color: #65676b;
-}
-
-.card-content .button {
-    background-color: #6a1b9a;
-    color: white;
-    padding: 0.7rem 1.4rem;
-    border-radius: 5px;
-    font-weight: 600;
-    transition: background-color 0.3s;
-    display: inline-block;
-}
-
-.card-content .button:hover {
-    background-color: #4a148c;
-}
-
-
-/* --- Pagination (Diperbarui) --- */
-main.pagination-links {
-    margin-top: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.pagination-links a,
-.pagination-links span {
-    color: #65676b;
-    padding: 0.5rem 0.8rem;
-    border-radius: 5px;
-}
-
-.pagination-links span[aria-current="page"] span {
-    background-color: #4a148c;
-    color: white;
-    font-weight: bold;
-}
-
-.pagination-links a:hover {
-    background-color: #e9ebee;
-}
-
-/* --- Styling Halaman Detail --- */
-
-.detail-page {
-    background-color: #f0f2f5;
-    padding: 3rem 0;
-    position: relative;
-}
-
-.back-button {
-    position: absolute;
-    top: 3rem;
-    left: 5%;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
-    background-color: white;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    z-index: 10;
-}
-
-.detail-container {
-    width: 90%;
-    max-width: 750px;
-    margin: 0 auto;
-    padding: 2rem 3rem;
-    background-color: white;
-    border-radius: 8px;
-}
-
-.detail-header h1 {
     font-size: 2.2rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
+    font-weight: 700;
+    margin: 4px 0;
 }
 
-.detail-header .metadata {
-    color: #777;
-    margin-bottom: 1.5rem;
+/* Container */
+.container-home {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
-.detail-image {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 2rem;
-}
-
-.detail-body {
-    font-size: 1.1rem;
-    line-height: 1.8;
-}
-
-.detail-body p {
-    margin-bottom: 1.5rem;
-}
-
-.comment-section {
-    margin-top: 3rem;
-    padding-top: 2rem;
-    border-top: 1px solid #eee;
-}
-
-.comment-section h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-    font-weight: 600;
-}
-
-/* Form Komentar */
-.comment-form {
+/* Intro Section */
+.intro {
     display: flex;
-    gap: 1rem;
+    justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 2.5rem;
+    gap: 40px;
+    margin-top: 2rem;
+    flex-wrap: wrap;
 }
 
-.comment-avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-}
-
-.comment-input-area {
+.intro .left {
     flex: 1;
+}
+
+.intro .left h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.intro .left span img {
+    height: 25px;
+    margin-left: 10px;
+}
+
+.intro .right {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+}
+
+.intro .right .img {
+    background-color: #9d9d9d;
+    border-radius: 12px;
+    overflow: hidden;
+    color: white;
+    text-align: left;
+    padding: 10px;
+    width: 100%;
+    max-width: 220px;
+}
+
+.intro .right .img img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.intro .right .img .p p:first-child {
+    font-weight: 600;
+}
+
+/* Statistic Boxes */
+.data-information {
+    background-color: #9d9d9d;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.data-information .content {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.data-information .box {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding-right: 100px;
+    padding-left: 100px;
 }
 
-.comment-input-area input[type="text"],
-.comment-input-area textarea {
+.data-information .box iconify-icon {
+    font-size: 100px;
+    color: black;
+}
+
+/* Berita */
+.berita {
+    margin-top: 3rem;
+}
+
+.berita h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.slider-wrapper {
+    position: relative;
+    overflow: hidden;
+    margin-top: 2rem;
+}
+
+.slider {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+.card-information {
+    width: 340px;
+    height: 400px;
+    background-color: #9d9d9d;
+    color: white;
+    border-radius: 12px;
+    padding: 1rem;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.card-information .img-information {
     width: 100%;
-    border: 1px solid #ddd;
-    background-color: #f7f7f7;
-    padding: 0.7rem 1rem;
+    height: 200px;
+    overflow: hidden;
     border-radius: 8px;
-    font-family: inherit;
+}
+
+.card-information .img-information img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-information .title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-top: 8px;
+}
+
+.card-information .description {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-information button {
+    background-color: #4B0072;
+    border-radius: 5px;
+    padding: 5px 15px;
+    border: none;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: auto;
+}
+
+.card-information button:hover {
+    background-color: #2f004d;
+    color: white;
+}
+
+/* Struktur container untuk slider */
+.slider-container {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Isi slider (card) */
+.slider {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px 0;
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+/* Tombol panah kiri-kanan */
+.slider-controls {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    pointer-events: none; /* agar card bisa digeser juga */
+}
+
+.slider-controls button {
+    background-color: rgba(75, 0, 114, 0.9);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    pointer-events: all; /* aktifkan pointer */
+    transition: 0.3s;
+}
+
+.slider-controls button:hover {
+    background-color: #2f004d;
+}
+
+/* Tombol Lihat Semua */
+.lihat-semua-btn {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.lihat-semua-btn button {
+    background-color: #4b0072;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Container utama */
+.container {
+    background-color: #e5e5e5;
+    padding: 3rem 2rem 3rem 2rem;
+    max-width: 1200px;
+    margin: -60px auto 40px; /* overlap ke hero dan kasih jarak ke footer */
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.05);
+    z-index: 1;
+    position: relative;
+}
+
+/* Search bar */
+.container-search {
+    margin-bottom: 2rem;
+}
+
+.container-search input[type="search"] {
+    padding: 10px 16px;
     font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 300px;
+}
+
+/* Card berita list */
+.container-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.container-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.container-img {
+    width: 200px;
+    height: 140px;
+    background-color: #000;
+    border-radius: 8px;
+}
+
+/* Konten berita */
+.container-info {
+    flex: 1;
+}
+
+.container-info h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.container-date {
+    font-size: 0.9rem;
+    color: #333;
     margin-bottom: 0.7rem;
 }
 
-.comment-input-area textarea {
-    resize: vertical;
+.container-info p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 1rem;
 }
 
-.kirim-button {
-    align-self: flex-end;
-    resize: vertical; /* Membolehkan user mengubah tinggi textarea */
-}
-
-.kirim-button {
-    align-self: flex-end; /* Memposisikan tombol ke kanan */
-    padding: 0.6rem 1.5rem;
-    border-radius: 20px;
-    border: none;
-    background-color: #333;
+.container-button {
+    background-color: #4B0072;
     color: white;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: inline-block;
 }
 
-.kirim-button:hover {
-    background-color: #555;
+/* Pagination */
+.container-pagination {
+    text-align: center;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
 }
 
-/* Daftar Komentar */
-.comment-list {
+.container-pagination a,
+.container-pagination span {
+    padding: 6px 10px;
+    border-radius: 4px;
+    background-color: white;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: #4B0072;
+}
+
+.container-pagination span {
+    background-color: #4B0072;
+    color: white;
+}
+
+/* === PENGURUS === */
+.container-pengurus {
+    background-color: white;
+    padding: 3rem 2rem 3rem 2rem;
+    max-width: 1200px;
+    text-align: center;
+    margin: -150px auto 40px; /* overlap ke hero dan kasih jarak ke footer */
+}
+
+.pengurus-section {
+    background-color: #e4e4e4;
+    margin: 40px auto;
+    padding: 30px 25px;
+    border-radius: 20px;
+    max-width: 1000px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    z-index: 1;
+    position: relative;
+}
+
+.pengurus-section p {
+    font-size: 1rem;
+    color: #000;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.pengurus-grid-2col {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 24px;
+    margin-top: 30px;
+    align-items: center;
 }
 
-.comment-item {
+.pengurus-row {
     display: flex;
-    gap: 1rem;
-    align-items: flex-start;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: stretch;
 }
 
-.comment-content {
-    flex: 1;
-}
 
-.comment-author {
-    font-weight: 600;
-    margin-bottom: 0.2rem;
-    display: block;
-}
-
-.comment-text {
-    margin-bottom: 0.5rem;
-}
-
-.comment-meta {
+.pengurus-card {
+    padding: 16px;
+    text-align: center;
+    width: 180px;
     display: flex;
-    gap: 1rem;
-    font-size: 0.8rem;
-    color: #777;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
 }
 
-.comment-meta a {
-    font-weight: 600;
-    color: #555;
+.pengurus-card p{
+    text-align: center;
 }
 
-/* Untuk placeholder di halaman daftar */
-.dummy-image-list {
-    display: block;
-    width: 220px;
-    height: 160px;
-    background-color: #000000; /* Warna hitam */
-    border-radius: 8px;
-    font-size: 0;
+.pengurus-row.center-card {
+    justify-content: center;
 }
 
-/* Untuk placeholder di halaman detail */
-.dummy-image-detail {
-    display: block;
+.foto-bulat {
+    width: 100px;
+    height: 100px;
+    background-color: #d9d9d9;
+    border-radius: 50%;
+    margin: 0 auto 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.foto-bulat img {
     width: 100%;
-    height: 400px;
-    background-color: #000000; /* Warna hitam */
-    border-radius: 8px;
-    font-size: 0;
+    height: 100%;
+    object-fit: cover;
 }
 
-/* --- Footer --- */
+.jabatan {
+    font-weight: bold;
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+    text-align: center;
+    min-height: 40px;
+}
+
+.nama {
+    font-size: 0.9rem;
+    min-height: 40px;
+}
+
+.invisible-card {
+    visibility: hidden;
+}
+
+/* === ABOUT === */
+.description h2 {
+    text-align: center;
+}
+
+.description p{
+    text-align: justify;
+}
+
+.container-about {
+    background-color: white;
+    padding: 3rem 2rem 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: -50px;
+}
+
+.visi h2{
+    text-align: center;
+}
+
+.visi p{
+    text-align: justify;
+}
+
+.misi h2{
+    text-align: center;
+}
+
+.misi p{
+    text-align: justify;
+}
+
+.map-yt {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 200px;
+    margin-top: 2rem;
+}
+
+/* Footer */
 footer {
+    background-color: #2c0039;
+    color: white;
+    padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 1rem 5%;
-    background-color: #333;
-    color: #ccc;
-    font-size: 0.9rem;
+    font-size: 14px;
 }
+
+footer a{
+    text-decoration: none;
+    color: white;
+    margin: 5px;
+}
+
+/* Artikel */
+.article-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #e5e5e5;
+    max-width: 800px;
+    padding: 2rem;
+    border-radius: 20px;
+    position: relative;
+    overflow-y: auto;
+    max-height: 90vh;
+}
+
+.modal-close {
+    position: absolute;
+    top: 1.2rem;
+    left: 1.5rem;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: black;
+}
+
