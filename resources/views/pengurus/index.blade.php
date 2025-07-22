@@ -9,9 +9,9 @@
         @foreach ($departemenList as $departemen)
             <div class="pengurus-section">
                 <h3 style="text-align:center; font-weight:bold;">"{{ $departemen->nama }}"</h3>
-                <p style="text-align:justify;">{{ $departemen->penjelasan }}</p>
+                <p style="text-align:center;;">{{ $departemen->penjelasan }}</p>
                 <h3 style="text-align:center; font-weight:bold;">"Tugas Pokok"</h3>
-                <p style="text-align:justify;">{{ $departemen->tugas }}</p>
+                <p style="text-align:center;;">{{ $departemen->tugas }}</p>
             </div>
 
             <div class="pengurus-section">
