@@ -26,10 +26,10 @@
                 </div>
                 <div class="right">
                     <div class="img">
-                        @if ($ketua && $ketua->foto)
-                            <img src="{{ asset('storage/' . $ketua->foto) }}" alt="Ketua HMSI">
+                        @if ($wakil && $wakil->foto)
+                            <img src="{{ asset('images/ketua.jpg') }}" alt="Wakil Ketua HMSI">
                         @else
-                            <img src="{{ asset('images/default-profile.png') }}" alt="Default Ketua">
+                            <img src="{{ asset('images/default-profile.png') }}" alt="Default Wakil Ketua">
                         @endif
                         <div class="p">
                             <p>{{ $ketua->jabatan ?? 'Ketua HMSI' }}</p>
@@ -39,7 +39,7 @@
 
                     <div class="img">
                         @if ($wakil && $wakil->foto)
-                            <img src="{{ asset('storage/' . $wakil->foto) }}" alt="Wakil Ketua HMSI">
+                            <img src="{{ asset('images/wakil.jpg') }}" alt="Wakil Ketua HMSI">
                         @else
                             <img src="{{ asset('images/default-profile.png') }}" alt="Default Wakil Ketua">
                         @endif

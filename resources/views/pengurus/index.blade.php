@@ -7,15 +7,17 @@
 
     <div class="container-pengurus">
         @foreach ($departemenList as $departemen)
+            <!-- Penjelasan Departemen -->
             <div class="pengurus-section">
-                <h3 style="text-align:center; font-weight:bold;">"{{ $departemen->nama }}"</h3>
-                <p style="text-align:justify;">{{ $departemen->penjelasan }}</p>
-                <h3 style="text-align:center; font-weight:bold;">"Tugas Pokok"</h3>
-                <p style="text-align:justify;">{{ $departemen->tugas }}</p>
+                <h3 class="judul-departemen">"{{ $departemen->nama }}"</h3>
+                <p class="penjelasan">{{ $departemen->penjelasan }}</p>
+                <h3 class="judul-departemen">"Tugas Pokok"</h3>
+                <p class="penjelasan">{{ $departemen->tugas }}</p>
             </div>
 
+            <!-- Foto Pengurus -->
             <div class="pengurus-section">
-                <h2>{{ $departemen->nama }}</h2>
+                <h2 class="subjudul">{{ $departemen->nama }}</h2>
                 @php $pengurusChunk = $departemen->pengurus->chunk(2); @endphp
 
                 <div class="pengurus-grid-2col">
@@ -24,9 +26,8 @@
                             @foreach ($pair as $pengurus)
                                 <div class="pengurus-card">
                                     <div class="foto-bulat">
-                                        @if ($pengurus->foto)
-                                            <img src="{{ asset('storage/' . $pengurus->foto) }}"
-                                                alt="Foto {{ $pengurus->nama }}">
+                                        @if ($pengurus->foto && file_exists(public_path('storage/' . $pengurus->foto)))
+                                            <img src="{{ asset('storage/' . $pengurus->foto) }}" alt="Foto {{ $pengurus->nama }}">
                                         @else
                                             <span>Foto<br>Pengurus</span>
                                         @endif

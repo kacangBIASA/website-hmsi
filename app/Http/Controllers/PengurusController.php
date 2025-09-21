@@ -53,7 +53,7 @@ class PengurusController extends Controller
             'departemen_id' => 'required|exists:departemen,id',
             'nama' => 'required|string|max:255',
             'jabatan' => 'required|string|max:255',
-            'foto' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
+            'foto' => 'nullable|image|mimes:jpg,jpeg,png|max:5120',
         ]);
 
         $data = $request->only(['departemen_id', 'nama', 'jabatan']);
@@ -82,7 +82,7 @@ class PengurusController extends Controller
             'departemen_id' => 'required|exists:departemen,id',
             'nama' => 'required|string|max:255',
             'jabatan' => 'required|string|max:255',
-            'foto' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
+            'foto' => 'nullable|image|mimes:jpg,jpeg,png|max:5120',
         ]);
 
         $data = $request->only(['departemen_id', 'nama', 'jabatan']);
