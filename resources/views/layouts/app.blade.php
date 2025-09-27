@@ -25,6 +25,9 @@
             </a>
             <a href="/">HMSI</a>
         </div>
+        <button class="burger" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
         <nav>
             <a href="{{ route('home.index') }}" class="{{ request()->routeIs('home.index') ? 'active' : '' }}">Home</a>
             <a href="{{ route('berita.index') }}"
@@ -63,6 +66,10 @@
             left: direction * scrollAmount,
             behavior: 'smooth'
         });
+    }
+
+     function toggleMenu() {
+        document.querySelector("header nav").classList.toggle("show");
     }
 </script>
 

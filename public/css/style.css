@@ -52,6 +52,38 @@ header nav a:hover {
     border-bottom: 2px solid white;
 }
 
+.burger {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    header nav {
+        display: none;
+        flex-direction: column;
+        background: #4b0072;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 220px;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0,0,0,1);
+    }
+
+    header nav.show {
+        display: flex;
+    }
+
+    .burger {
+        display: block;
+    }
+}
+
 /* Hero Section */
 .hero-section {
     position: relative;

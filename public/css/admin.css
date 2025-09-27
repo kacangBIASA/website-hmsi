@@ -1,148 +1,149 @@
 /* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
 }
 
 /* Layout */
 .container {
-  display: flex;
-  min-height: 100vh;
+    display: flex;
+    min-height: 100vh;
 }
 
 /* Sidebar */
 .sidebar {
-  width: 220px;
-  background-color: #4B0082;
-  color: white;
-  padding: 20px;
-  position: fixed;
-  height: 100vh;
+    width: 250px;
+    background: #4b0072;
+    color: #fff;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .sidebar h2 {
-  font-size: 22px;
-  margin-bottom: 20px;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    background: #370055;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 .sidebar ul {
-  list-style-type: none;
-}
-
-.sidebar ul li {
-  margin-bottom: 15px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .sidebar ul li a {
-  color: white;
-  text-decoration: none;
-  display: block;
-  padding: 8px 12px;
-  border-radius: 6px;
-  transition: background-color 0.3s;
+    display: block;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #fff;
 }
 
 .sidebar ul li a:hover {
-  background-color: #37005d;
+    background: #5d008f;
+}
+
+.burger {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
 }
 
 /* Main Content */
 .main-content {
-  flex-grow: 1;
-  padding: 30px;
-  background-color: #f9f9f9;
-  margin-left: 220px;
+    flex: 1;
+    padding: 20px;
 }
 
 /* Header */
 .main-content header h1 {
-  font-size: 28px;
-  margin-bottom: 30px;
+    font-size: 28px;
+    margin-bottom: 30px;
 }
 
 /* Card Section */
 .card-container {
-  display: flex;
-  gap: 20px;
-  margin-bottom: 40px;
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
 }
 
 .card {
-  background-color: #ffffff;
-  flex: 1;
-  padding: 20px;
-  border-left: 5px solid #4B0082;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    flex: 1;
+    padding: 20px;
+    border-left: 5px solid #4b0082;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .card h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 
 .card p {
-  font-size: 24px;
-  font-weight: bold;
-  color: #4B0082;
+    font-size: 24px;
+    font-weight: bold;
+    color: #4b0082;
 }
 
 /* Data Table */
 .data-table {
-  background-color: #ffffff;
-  padding: 20px;
-  margin: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .data-table h2 {
-  margin-bottom: 20px;
-  font-size: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
 }
 
 .data-table table {
-  width: 100%;
-  border-collapse: collapse;
+    width: 100%;
+    border-collapse: collapse;
 }
 
 .data-table th,
 .data-table td {
-  padding: 12px;
-  border-bottom: 1px solid #ddd;
-  text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
 }
 
 .data-table th {
-  background-color: #eee;
-  font-weight: bold;
+    background-color: #eee;
+    font-weight: bold;
 }
 
 .data-table td button,
 .data-table td form button {
-  background-color: #4B0082;
-  color: white;
-  border: none;
-  padding: 6px 12px;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-right: 5px;
-  font-size: 14px;
+    background-color: #4b0082;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+    font-size: 14px;
 }
 
 .data-table td button:hover {
-  background-color: #37005d;
+    background-color: #37005d;
 }
 
 /* Responsive */
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .card-container {
     flex-direction: column;
   }
@@ -154,6 +155,55 @@ body {
   .main-content {
     padding: 15px;
   }
+} */
+
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        position: relative;
+    }
+
+    .sidebar-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #4b0072;
+        padding: 10px 20px;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .sidebar-menu {
+        display: none;
+        flex-direction: column;
+        background: #4b0072;
+        text-align: center;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 220px;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .sidebar.active .sidebar-menu {
+        display: flex;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
 }
 
 /* create berita */
@@ -175,7 +225,7 @@ body {
 }
 
 .btn-tambah {
-    background-color: #4B0072;
+    background-color: #4b0072;
     color: white;
     padding: 8px 16px;
     border: none;
@@ -235,65 +285,64 @@ body {
 }
 
 .flex-aksi {
-  display: flex;
-  gap: 6px;
-  align-items: center;
+    display: flex;
+    gap: 6px;
+    align-items: center;
 }
 
 /* FORM TAMBAH BERITA */
 .form-kelola {
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 800px;
-  margin-top: 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin-top: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .form-kelola div {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .form-kelola label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 8px;
-  color: #333;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
 }
 
 .form-kelola input[type="text"],
 .form-kelola input[type="file"],
 .form-kelola textarea {
-  width: 100%;
-  padding: 10px 14px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  transition: border-color 0.3s;
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.3s;
 }
 
 .form-kelola input[type="text"]:focus,
 .form-kelola textarea:focus {
-  border-color: #4B0082;
-  outline: none;
+    border-color: #4b0082;
+    outline: none;
 }
 
 .form-kelola textarea {
-  resize: vertical;
+    resize: vertical;
 }
 
 .form-kelola button[type="submit"] {
-  background-color: #4B0082;
-  color: white;
-  padding: 10px 20px;
-  font-size: 16px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+    background-color: #4b0082;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .form-kelola button[type="submit"]:hover {
-  background-color: #37005d;
+    background-color: #37005d;
 }
-

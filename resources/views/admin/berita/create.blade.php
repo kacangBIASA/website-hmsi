@@ -15,7 +15,7 @@
   </div>
 @endif
 
-<form calss="form-kelola" method="POST" action="{{ route('admin.berita.store') }}" enctype="multipart/form-data">
+<form class="form-kelola" method="POST" action="{{ route('admin.berita.store') }}" enctype="multipart/form-data">
     @csrf
 
     <div>
